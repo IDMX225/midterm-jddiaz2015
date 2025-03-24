@@ -23,16 +23,32 @@ header {
     background-color: rgba(255, 255, 255, 0.5);
 }
 
+
 header h1 {
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #2C3E50;
-    font-size: 4rem;
+    font-size: 4rem; /* Larger text size for desktops */
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     letter-spacing: 1px;
+}
+
+/* Media Queries for Mobile and Smaller Screens */
+@media (max-width: 1200) {
+    header h1 {
+        font-size: 2.5rem; /* Smaller font size on tablets and mobile */
+        top: 30%; /* Adjust the position a bit to fit on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2.5rem; /* Even smaller font size for mobile */
+        top: 25%; /* Adjust to ensure it's still centered */
+    }
 }
 
 header img {
